@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>{{ current_user.username }}</h1>
+    
+     <h2>Files </h2> </br>
+    {% for lst,files in posts %}
+    <br><hr>
+    	<form action = "save" method = "POST">
+		<A HREF="{{url_for('index',path=lst ) }}",name=path target="_blank" >{{lst}}</a><br>
+		Name:<input type=text name="path" value={{lst}}><br>
+		<textarea cols="50" name="file">{{files}}</textarea>
+		
+		<input type=submit >
+		</form>
+	{% endfor %}
+	
+
+
+    
+    <!--<a class="nav-item nav-link" href="{{ url_for('index') }}">Run</a>-->
+
+
+{% endblock content %}

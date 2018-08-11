@@ -1,0 +1,10 @@
+---
+- name: httpd play book
+  hosts: 
+   - 192.168.6.244
+   - 192.168.9.233   
+  tasks: 
+   - name: install  the httpd rpm      
+     yum: name=httpd state=present    
+   - name: start the httpd service      
+     service: name=httpd state=started
