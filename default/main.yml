@@ -1,0 +1,7 @@
+---
+- name: Python Testing
+  yum:
+    list: "{{ list_check }}"
+  register: is_installed
+- debug: msg = "{{ message }}"
+ 
