@@ -6,6 +6,7 @@
     {% for lst,files in posts %}
     <br><hr>
     	<form action = "save" method = "POST">
+			<!-- #individual forms to make every submit button pass only the value of only one file -->
 		<A HREF="{{url_for('index',path=lst ) }}",name=path target="_blank" >{{lst}}</a><br>
 		Name:<input type=text name="path" value={{lst}}><br>
 		<textarea cols="50" name="file">{{files}}</textarea>
