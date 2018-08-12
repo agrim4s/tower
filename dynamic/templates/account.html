@@ -2,7 +2,7 @@
 {% block content %}
     <h1>{{ current_user.username }}</h1>
     
-     <h2>Files </h2> </br>
+     <h2>Files </h2> <br>
     {% for lst,files in posts %}
     <br><hr>
     	<form action = "save" method = "POST">
